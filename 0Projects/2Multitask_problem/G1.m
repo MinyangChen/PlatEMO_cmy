@@ -6,6 +6,7 @@ function [x,f,g] = G1(x)
 % Output 'g' denotes all the constraint values of the solution
 
 % D = 13
+    a = 1;
     x = max(x, 0);
     x = min(x, [1,1,1,1,1,1,1,1,1,100,100,100,1]);
 
