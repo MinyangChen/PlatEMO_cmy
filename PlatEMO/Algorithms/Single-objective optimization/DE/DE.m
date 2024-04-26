@@ -28,7 +28,7 @@ classdef DE < ALGORITHM
             %% Optimization
             while Algorithm.NotTerminated(Population)
                 MatingPool = TournamentSelection(2,2*Problem.N,FitnessSingle(Population));
-                Offspring  = OperatorDE(Problem,Population,Population(MatingPool(1:end/2)),Population(MatingPool(end/2+1:end)),{CR,F,0,0});
+                Offspring  =  (Problem,Population,Population(MatingPool(1:end/2)),Population(MatingPool(end/2+1:end)),{CR,F,0,0});
                 replace             = FitnessSingle(Population) > FitnessSingle(Offspring);
                 Population(replace) = Offspring(replace);
             end

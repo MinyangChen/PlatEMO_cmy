@@ -83,7 +83,7 @@ classdef PROBLEM < handle & matlab.mixin.Heterogeneous
                 obj.(varargin{i}) = varargin{i+1};
             end
             obj.Setting();
-            obj.optimum  = obj.GetOptimum(10000);
+            obj.optimum  = obj.GetOptimum(10000);   %%%%%
             obj.PF       = obj.GetPF();
         end
     end
